@@ -1,16 +1,15 @@
 package com.sxl.sxlgiftpacks.selectcountrynumber;
 
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -22,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 /**
  * 类简要描述
  * <p/>
@@ -32,7 +30,7 @@ import java.util.List;
  *
  * 国际区号选择界面
  */
-public class CountryActivity extends Activity implements OnClickListener {
+public class CountryActivity extends Activity implements View.OnClickListener {
 
     String TAG = "CountryActivity";
 
@@ -103,7 +101,7 @@ public class CountryActivity extends Activity implements OnClickListener {
      * 添加监听
      */
     private void setListener() {
-        country_iv_clearText.setOnClickListener(new OnClickListener() {
+        country_iv_clearText.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -160,7 +158,7 @@ public class CountryActivity extends Activity implements OnClickListener {
             }
         });
 
-        country_lv_countryList.setOnItemClickListener(new OnItemClickListener() {
+        country_lv_countryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long arg3) {
@@ -218,12 +216,9 @@ public class CountryActivity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_back:
-//                intent();
-                COUNTRYNUMBER="+86";
-                finish();
-                break;
+        if (view.getId()==R.id.iv_back){
+            COUNTRYNUMBER="+86";
+            finish();
         }
     }
 
