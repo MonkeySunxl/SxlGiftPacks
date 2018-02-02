@@ -12,7 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
-import com.riyu365.pkusky.R;
+import com.sxl.sxlgiftpacks.R;
 
 import java.util.ArrayList;
 import java.util.List;
