@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SxlGiftPacks</string>
+    <string name="select_city">选择国家和地区</string>
+    <string name="search">搜索</string>
+</resources>
